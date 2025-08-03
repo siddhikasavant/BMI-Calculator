@@ -1,10 +1,9 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 # Load the trained model
-with open("bmi_model.pkl", "rb") as file:
-    model = pickle.load(file)
+model=joblib.load('bmi_model.joblib')
 
 # Set page configuration
 st.set_page_config(page_title="BMI Calculator", layout="centered")
